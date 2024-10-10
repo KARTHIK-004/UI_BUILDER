@@ -5,7 +5,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import DesktopWindowsIcon from "@mui/icons-material/DesktopWindows";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import TabletIcon from "@mui/icons-material/Tablet";
+import LaunchIcon from "@mui/icons-material/Tablet";
 import LaptopIcon from "@mui/icons-material/Laptop";
 import StorageIcon from "@mui/icons-material/Storage";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
@@ -15,7 +15,6 @@ import FormatBoldIcon from "@mui/icons-material/FormatBold";
 import FormatItalicIcon from "@mui/icons-material/FormatItalic";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
 import FormatColorFillIcon from "@mui/icons-material/FormatColorFill";
-import LaunchIcon from "@mui/icons-material/Launch";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import FolderOpenIcon from "@mui/icons-material/FolderOpen";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
@@ -54,7 +53,6 @@ import NotesIcon from "@mui/icons-material/Notes";
 import SubjectIcon from "@mui/icons-material/Subject";
 import LinkIcon from "@mui/icons-material/Link";
 import AddLinkIcon from "@mui/icons-material/AddLink";
-
 import CloudIcon from "@mui/icons-material/Cloud";
 import CloudQueueIcon from "@mui/icons-material/CloudQueue";
 import CloudDoneIcon from "@mui/icons-material/CloudDone";
@@ -95,15 +93,13 @@ import SkipNextIcon from "@mui/icons-material/SkipNext";
 import ReplayIcon from "@mui/icons-material/Replay";
 import ShuffleIcon from "@mui/icons-material/Shuffle";
 
-
 export function TextToIcon({
   text,
   size = "medium",
   fontSize,
-  className = ""
+  className = "",
 }) {
   switch (text) {
-    // Existing cases
     case "RectangleIcon":
       return (
         <RectangleIcon
@@ -641,12 +637,428 @@ export function TextToIcon({
           className={`text-sky-400 ${className}`}
         />
       );
+    case "FolderOpenIcon":
+      return (
+        <FolderOpenIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={`text-sky-400 ${className}`}
+        />
+      );
     case "ThumbUpIcon":
       return (
         <ThumbUpIcon
           style={{ fontSize: fontSize }}
           fontSize={size}
           className={`text-sky-400 ${className}`}
+        />
+      );
+    case "InsertDriveFileIcon":
+      return (
+        <InsertDriveFileIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={`text-sky-400 ${className}`}
+        />
+      );
+    case "ExposureIcon":
+      return (
+        <ExposureIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={`text-sky-400 ${className}`}
+        />
+      );
+    case "FilterIcon":
+      return (
+        <FilterIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={`text-sky-400 ${className}`}
+        />
+      );
+    case "BugReportIcon":
+      return (
+        <BugReport
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={`text-sky-400 ${className}`}
+        />
+      );
+    case "CreateNewFolderIcon":
+      return (
+        <CreateNewFolderIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SaveAltIcon":
+      return (
+        <SaveAltIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "DeleteForeverIcon":
+      return (
+        <DeleteForeverIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "BuildIcon":
+      return (
+        <BuildIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "BugReportIcon":
+      return (
+        <BugReportIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SpeedIcon":
+      return (
+        <SpeedIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "TimelineIcon":
+      return (
+        <TimelineIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "TuneIcon":
+      return (
+        <TuneIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SettingsApplicationsIcon":
+      return (
+        <SettingsApplicationsIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ExtensionIcon":
+      return (
+        <ExtensionIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ViewModuleIcon":
+      return (
+        <ViewModuleIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ViewQuiltIcon":
+      return (
+        <ViewQuiltIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ViewCompactIcon":
+      return (
+        <ViewCompactIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ViewStreamIcon":
+      return (
+        <ViewStreamIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ViewArrayIcon":
+      return (
+        <ViewArrayIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ViewCarouselIcon":
+      return (
+        <ViewCarouselIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ViewColumnIcon":
+      return (
+        <ViewColumnIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ViewListIcon":
+      return (
+        <ViewListIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "GridOnIcon":
+      return (
+        <GridOnIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "TableChartIcon":
+      return (
+        <TableChartIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "FormatAlignLeftIcon":
+      return (
+        <FormatAlignLeftIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "FormatAlignCenterIcon":
+      return (
+        <FormatAlignCenterIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "FormatAlignRightIcon":
+      return (
+        <FormatAlignRightIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "FormatAlignJustifyIcon":
+      return (
+        <FormatAlignJustifyIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "BorderAllIcon":
+      return (
+        <BorderAllIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "BorderOuterIcon":
+      return (
+        <BorderOuterIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "BorderInnerIcon":
+      return (
+        <BorderInnerIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "BorderClearIcon":
+      return (
+        <BorderClearIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "TextFieldsIcon":
+      return (
+        <TextFieldsIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "TitleIcon":
+      return (
+        <TitleIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ShortTextIcon":
+      return (
+        <ShortTextIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "NotesIcon":
+      return (
+        <NotesIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SubjectIcon":
+      return (
+        <SubjectIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "LinkIcon":
+      return (
+        <LinkIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "AddLinkIcon":
+      return (
+        <AddLinkIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "CloudIcon":
+      return (
+        <CloudIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "CloudQueueIcon":
+      return (
+        <CloudQueueIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "CloudDoneIcon":
+      return (
+        <CloudDoneIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "CloudOffIcon":
+      return (
+        <CloudOffIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SettingsEthernetIcon":
+      return (
+        <SettingsEthernetIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SettingsInputComponentIcon":
+      return (
+        <SettingsInputComponentIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SettingsInputHdmiIcon":
+      return (
+        <SettingsInputHdmiIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SettingsInputSvideoIcon":
+      return (
+        <SettingsInputSvideoIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SettingsOverscanIcon":
+      return (
+        <SettingsOverscanIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "SettingsBrightnessIcon":
+      return (
+        <SettingsBrightnessIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "BrightnessMediumIcon":
+      return (
+        <BrightnessMediumIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
+        />
+      );
+    case "ContrastIcon":
+      return (
+        <ContrastIcon
+          style={{ fontSize: fontSize }}
+          fontSize={size}
+          className={className}
         />
       );
     default:

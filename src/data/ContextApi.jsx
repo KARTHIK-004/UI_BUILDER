@@ -1,162 +1,35 @@
-// const [openProjectWindow, setOpenProjectWindow] = useState(false);
-// const [showSearchBar, setShowSearchBar] = useState(false);
-// const [isMobileView, setIsMobileView] = useState(false);
-// const [showSideBar, setShowSideBar] = useState(true);
-// const [allProjects, setAllProjects] = useState([]);
-// const [allFavoriteComponents, setAllFavoriteComponents] = useState([]);
-// const [isLoading, setIsLoading] = useState(true);
-// const [openIconWindow, setOpenIconWindow] = useState(false);
-// const [showComponentPage, setShowComponentPage] = useState(true);
-// const [selectedProject, setSelectedProject] = useState(null);
-// const [dropDownPositions, setDropDownPositions] = useState({
-//   left: 0,
-//   top: 0,
-// });
-
-// const [openDropDown, setOpenDropDown] = useState(false);
-// const [openDeleteWindow, setOpenDeleteWindow] = useState(false);
-// const [selectedComponent, setSelectedComponent] = useState(null);
-// const [openComponentEditor, setOpenComponentEditor] = useState(false);
-// const [openAllProjectsWindow, setOpenAllProjectsWindow] = useState(false);
-// const [openSortingDropDown, setOpenSortingDropDown] = useState(false);
-// const [sortingDropDownPositions, setSortingDropDownPositions] = useState({
-//   left: 0,
-//   top: 0,
-// });
-// const [sortedProjects, setSortedProjects] = useState([]);
-// const { user, isLoaded, isSignedIn } = useUser();
-
-//   //   const [sortingOptions, setSortingOptions] = useState([
-//   //     {
-//   //       category: "Order",
-//   //       options: [
-//   //         { label: "A-Z", value: "asc", selected: true },
-//   //         { label: "Z-A", value: "desc", selected: false },
-//   //       ],
-//   //     },
-//   //     {
-//   //       category: "Date",
-//   //       options: [
-//   //         { label: "Newest", value: "newest", selected: false },
-//   //         { label: "Oldest", value: "oldest", selected: false },
-//   //       ],
-//   //     },
-//   //   ]);
-
-//   //   const [openAllFavoriteComponentsWindow, setOpenAllFavoriteComponentsWindow] =
-//   //     useState(false);
-//   //   const [openFilterDropDown, setOpenFilterDropDown] = useState(false);
-//   //   const [filterDropDownPositions, setFilterDropDownPositions] = useState({
-//   //     left: 0,
-//   //     top: 0,
-//   //   });
-
-//   //   const [selectedProjectToFilter, setSelectedProjectToFilter] = useState(null);
-
-//   //   const [openLiveSearchBar, setOpenLiveSearchBar] = useState(false);
-//   //   const [mainSearchQuery, setMainSearchQuery] = useState("");
-//   //   const [liveSearchPositions, setLiveSearchPositions] = useState({
-//   //     left: 0,
-//   //     top: 0,
-//   //   });
-
-//   //End of variables
-//   //
-//   //Update the window size
-
-//   //   useEffect(() => {
-//   //     function handleResize() {
-//   //       setIsMobileView(window.innerWidth <= 640);
-//   //     }
-
-//   //     // Initial check
-//   //     handleResize();
-
-//   //     // Event listener for window resize
-//   //     window.addEventListener("resize", handleResize);
-
-//   //     // Cleanup
-//   //     return () => {
-//   //       window.removeEventListener("resize", handleResize);
-//   //     };
-//   //   }, []);
-
-//   //   //Simulate the fetch using setTimeout
-//   //   useEffect(() => {
-//   //     async function fetchAllProjectsNew() {
-//   //       try {
-//   //         const response = await fetch(`/api/projects?clerkUserId=${user?.id}`);
-//   //         if (!response.ok) {
-//   //           throw new Error("Failed to fetch projects");
-//   //         }
-//   //         const data = await response.json();
-//   //         if (data.projects) {
-//   //           data.projects.forEach((project) => {
-//   //             project.components.sort((a, b) => {
-//   //               return (
-//   //                 new Date(b.createdAt).getTime() -
-//   //                 new Date(a.createdAt).getTime()
-//   //               );
-//   //             });
-//   //           });
-//   //           // Update the all Projects
-//   //           setAllProjects(data.projects);
-//   //           setSortedProjects(data.projects);
-//   //         }
-//   //       } catch (error) {
-//   //         console.error(error);
-//   //       } finally {
-//   //         setIsLoading(false);
-//   //       }
-//   //     }
-
-//   //     if (isLoaded && isSignedIn) {
-//   //       fetchAllProjectsNew();
-//   //     }
-//   //   }, [user, isLoaded, isSignedIn]);
-
-//   //   // Update favorite components when allProjects changes
-//   //   useEffect(() => {
-//   //     if (allProjects.length > 0) {
-//   //       const favoriteComponents = allProjects.flatMap((project) =>
-//   //         project.components.filter((component) => component.isFavorite)
-//   //       );
-//   //       setAllFavoriteComponents(favoriteComponents);
-//   //     }
-//   //   }, [allProjects]);
-
-//   //   // Update local storage whenever hideSideBar changes
-//   //   useEffect(() => {
-//   //     if (typeof window !== "undefined") {
-//   //       localStorage.setItem("openedSideBar", JSON.stringify(openSideBar));
-//   //     }
-//   //   }, [openSideBar]);
-
-//   //   useEffect(() => {
-//   //     if (typeof window !== "undefined") {
-//   //       // Save the dark mode state to localStorage whenever it changes
-//   //       const isDarkMode = darkModeMenu[1].isSelected;
-//   //       localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
-//   //     }
-//   //   }, [darkModeMenu]);
-
-//   //   useEffect(() => {
-//   //     if (menuItems[0].isSelected) {
-//   //       setSelectedProject(null);
-//   //       setShowComponentPage(false);
-//   //     }
-//   //     if (menuItems[1].isSelected) {
-//   //       setOpenAllProjectsWindow(true);
-//   //       setSelectedProject(null);
-//   //       setShowComponentPage(false);
-//   //     }
-
-//   //     if (menuItems[2].isSelected) {
-//   //       setOpenAllFavoriteComponentsWindow(true);
-//   //     }
-//   //   }, [menuItems]);
-
-//   return (
+//   //Simulate the fetch using setTimeout
+//   useEffect(() => {
+//     async function fetchAllProjectsNew() {
+//       try {
+//         const response = await fetch(`/api/projects?clerkUserId=${user?.id}`);
+//         if (!response.ok) {
+//           throw new Error("Failed to fetch projects");
+//         }
+//         const data = await response.json();
+//         if (data.projects) {
+//           data.projects.forEach((project) => {
+//             project.components.sort((a, b) => {
+//               return (
+//                 new Date(b.createdAt).getTime() -
+//                 new Date(a.createdAt).getTime()
+//               );
+//             });
+//           });
+//           // Update the all Projects
+//           setAllProjects(data.projects);
+//           setSortedProjects(data.projects);
+//         }
+//       } catch (error) {
+//         console.error(error);
+//       } finally {
+//         setIsLoading(false);
+//       }
+//     }
+//     if (isLoaded && isSignedIn) {
+//       fetchAllProjectsNew();
+//     }
+//   }, [user, isLoaded, isSignedIn]);
 
 import React, {
   createContext,
@@ -212,7 +85,7 @@ export const AppProvider = ({ children }) => {
 
   // Toggle theme mode and save it to localStorage
   const toggleTheme = () => {
-    setDarkMode(prevMode => !prevMode);
+    setDarkMode((prevMode) => !prevMode);
   };
 
   useEffect(() => {
@@ -238,12 +111,52 @@ export const AppProvider = ({ children }) => {
   // Update favorite components when allProjects changes
   useEffect(() => {
     if (allProjects.length > 0) {
-      const favoriteComponents = allProjects.flatMap(project =>
-        project.components.filter(component => component.isFavorite)
+      const favoriteComponents = allProjects.flatMap((project) =>
+        project.components.filter((component) => component.isFavorite)
       );
       setAllFavoriteComponents(favoriteComponents);
     }
   }, [allProjects]);
+
+  useEffect(() => {
+    if (menuItems[0].isSelected) {
+      setSelectedProject(null);
+      setShowComponentPage(false);
+    }
+    if (menuItems[1].isSelected) {
+      setOpenAllProjectsWindow(true);
+      setSelectedProject(null);
+      setShowComponentPage(false);
+    }
+
+    if (menuItems[2].isSelected) {
+      setOpenAllFavoriteComponentsWindow(true);
+    }
+  }, [menuItems]);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobileView(window.innerWidth <= 640);
+    }
+
+    // Initial check
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // Update local storage whenever hideSideBar changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("openedSideBar", JSON.stringify(openSideBar));
+    }
+  }, [openSideBar]);
 
   // Additional state management
   const [selectedIcon, setSelectedIcon] = useState({
@@ -252,7 +165,7 @@ export const AppProvider = ({ children }) => {
   });
   const [openProjectWindow, setOpenProjectWindow] = useState(false);
   const [openIconWindow, setOpenIconWindow] = useState(false);
-  const [showComponentPage, setShowComponentPage] = useState(true);
+  const [showComponentPage, setShowComponentPage] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [dropDownPositions, setDropDownPositions] = useState({
     left: 0,
@@ -269,6 +182,42 @@ export const AppProvider = ({ children }) => {
     top: 0,
   });
   const [sortedProjects, setSortedProjects] = useState([]);
+  const [sortingOptions, setSortingOptions] = useState([
+    {
+      category: "Order",
+      options: [
+        { label: "A-Z", value: "asc", selected: true },
+        { label: "Z-A", value: "desc", selected: false },
+      ],
+    },
+    {
+      category: "Date",
+      options: [
+        { label: "Newest", value: "newest", selected: false },
+        { label: "Oldest", value: "oldest", selected: false },
+      ],
+    },
+  ]);
+  const [openAllFavoriteComponentsWindow, setOpenAllFavoriteComponentsWindow] =
+    useState(false);
+  const [openFilterDropDown, setOpenFilterDropDown] = useState(false);
+  const [filterDropDownPositions, setFilterDropDownPositions] = useState({
+    left: 0,
+    top: 0,
+  });
+
+  const [selectedProjectToFilter, setSelectedProjectToFilter] = useState(null);
+
+  const [openLiveSearchBar, setOpenLiveSearchBar] = useState(false);
+  const [mainSearchQuery, setMainSearchQuery] = useState("");
+  const [liveSearchPositions, setLiveSearchPositions] = useState({
+    left: 0,
+    top: 0,
+  });
+
+  const onUpdateIconSelected = (icon) => {
+    setSelectedIcon(icon);
+  };
 
   // Memoize the values to avoid unnecessary re-renders
   const themeContextValue = useMemo(
@@ -319,10 +268,27 @@ export const AppProvider = ({ children }) => {
       setOpenSortingDropDown,
       sortingDropDownPositions,
       setSortingDropDownPositions,
+      openAllFavoriteComponentsWindow,
+      setOpenAllFavoriteComponentsWindow,
+      openFilterDropDown,
+      setOpenFilterDropDown,
       sortedProjects,
       setSortedProjects,
       selectedIcon,
       setSelectedIcon,
+      filterDropDownPositions,
+      setFilterDropDownPositions,
+      sortingOptions,
+      setSortingOptions,
+      onUpdateIconSelected,
+      selectedProjectToFilter,
+      setSelectedProjectToFilter,
+      openLiveSearchBar,
+      setOpenLiveSearchBar,
+      mainSearchQuery,
+      setMainSearchQuery,
+      liveSearchPositions,
+      setLiveSearchPositions,
     }),
     [
       value,
@@ -348,6 +314,15 @@ export const AppProvider = ({ children }) => {
       sortingDropDownPositions,
       sortedProjects,
       selectedIcon,
+      openAllFavoriteComponentsWindow,
+      filterDropDownPositions,
+      openFilterDropDown,
+      sortingOptions,
+      selectedProjectToFilter,
+      onUpdateIconSelected,
+      openLiveSearchBar,
+      liveSearchPositions,
+      mainSearchQuery,
     ]
   );
 

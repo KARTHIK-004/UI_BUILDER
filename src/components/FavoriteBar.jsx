@@ -3,7 +3,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useAppContext, useTheme } from "../data/ContextApi";
-import { CircularProgress } from "@mui/material";
+import { Skeleton } from "@mui/material";
 
 function FavoriteBar() {
   const { allFavoriteComponents, isLoading } = useAppContext();
@@ -14,9 +14,9 @@ function FavoriteBar() {
     const formattedDate = new Intl.DateTimeFormat("en-US", {
       day: "2-digit",
       month: "long",
-      year: "numeric"
+      year: "numeric",
     }).format(new Date(date));
-    
+
     return formattedDate;
   };
 
@@ -24,14 +24,13 @@ function FavoriteBar() {
     <div
       className={`${
         darkMode ? "bg-slate-800 text-white" : "bg-white text-slate-700"
-      } w-full p-8 rounded-lg mt-4`}
+      } w-full p-8 rounded-lg mt-4 shadow`}
     >
       {/* Main Header */}
       <div className="flex justify-between">
         <span className="font-bold text-lg">Favorite Components</span>
         {/* Button */}
         <button
-          // onClick={() => setOpenAllFavoriteComponentsWindow(true)}
           disabled={allFavoriteComponents.length === 0}
           style={{ opacity: allFavoriteComponents.length === 0 ? 0.5 : 1 }}
           className="bg-sky-500 flex gap-2 items-center text-white text-[12px] p-2 px-3 rounded-md"
@@ -51,11 +50,39 @@ function FavoriteBar() {
 
       {/* Components */}
       {isLoading ? (
-        <div className="flex flex-col gap-3 justify-center items-center w-full mt-[70px] mb-7">
-          <CircularProgress />
-          <span className="text-slate-400 dark:text-slate-500 text-sm">
-            Loading...
-          </span>
+        <div className="px-4 flex flex-col gap-3 mt-1">
+          {/* Skeleton for each row */}
+          {[...Array(5)].map((_, index) => (
+            <div
+              key={index}
+              className="grid grid-cols-4 gap-4 items-center rounded-lg p-2 max-sm:grid-cols-2"
+            >
+              {/* Component Name Skeleton */}
+              <Skeleton variant="text" width={100} height={20} />
+
+              {/* Date Skeleton */}
+              <Skeleton
+                variant="text"
+                width={120}
+                height={20}
+                className="max-sm:hidden"
+              />
+
+              {/* Project Skeleton */}
+              <Skeleton
+                variant="rectangular"
+                width={100}
+                height={30}
+                className="max-sm:hidden"
+              />
+
+              {/* Actions Skeleton */}
+              <div className="flex gap-2">
+                <Skeleton variant="circular" width={28} height={28} />
+                <Skeleton variant="circular" width={28} height={28} />
+              </div>
+            </div>
+          ))}
         </div>
       ) : allFavoriteComponents.length === 0 ? (
         <div className="flex justify-center items-center mt-16 mb-8 text-slate-400 dark:text-slate-500 text-sm">
@@ -92,7 +119,10 @@ function FavoriteBar() {
                   className="bg-sky-500 rounded-full w-7 h-7 flex items-center justify-center hover:bg-sky-600 cursor-pointer"
                   aria-label="Edit"
                 >
-                  <EditIcon fontSize="small" className="text-white text-[13px]" />
+                  <EditIcon
+                    fontSize="small"
+                    className="text-white text-[13px]"
+                  />
                 </div>
 
                 {/* Delete Button */}
@@ -100,7 +130,10 @@ function FavoriteBar() {
                   className="bg-sky-500 rounded-full w-7 h-7 flex items-center justify-center hover:bg-sky-600 cursor-pointer"
                   aria-label="Delete"
                 >
-                  <DeleteIcon fontSize="small" className="text-white text-[13px]" />
+                  <DeleteIcon
+                    fontSize="small"
+                    className="text-white text-[13px]"
+                  />
                 </div>
               </div>
             </div>

@@ -660,13 +660,55 @@ export const allIconsArray = [
     name: "ShuffleIcon",
     isSelected: false,
   },
+  {
+    id: 94,
+    icon: <AspectRatioIcon className="text-[20px]" />,
+    name: "AspectRatioIcon",
+    isSelected: false,
+  },
+  {
+    id: 95,
+    icon: <BookmarkIcon className="text-[20px]" />,
+    name: "BookmarkIcon",
+    isSelected: false,
+  },
+  {
+    id: 96,
+    icon: <AssignmentIcon className="text-[20px]" />,
+    name: "AssignmentIcon",
+    isSelected: false,
+  },
+  {
+    id: 97,
+    icon: <BrushIcon className="text-[20px]" />,
+    name: "BrushIcon",
+    isSelected: false,
+  },
+  {
+    id: 98,
+    icon: <BubbleChartIcon className="text-[20px]" />,
+    name: "BubbleChartIcon",
+    isSelected: false,
+  },
+  {
+    id: 99,
+    icon: <CastIcon className="text-[20px]" />,
+    name: "CastIcon",
+    isSelected: false,
+  },
+  {
+    id: 100,
+    icon: <CategoryIcon className="text-[20px]" />,
+    name: "CategoryIcon",
+    isSelected: false,
+  },
 ];
 
 export default function AllIcons({ allIconsState, setAllIconsState }) {
   const {
-    selectedProjectObject: { selectedProject },
-    openIconWindowObject: { openIconWindow },
-  } = useAppContext();
+    selectedProjectObject: { selectedProject } = {},
+    openIconWindowObject: { openIconWindow } = {},
+  } = useAppContext() || {};
 
   function handleClickedIcon(singleIcon) {
     setAllIconsState((prevState) =>
@@ -686,7 +728,7 @@ export default function AllIcons({ allIconsState, setAllIconsState }) {
         }))
       );
     }
-  }, [openIconWindow]);
+  }, [selectedProject]);
 
   return (
     <div className="flex flex-wrap gap-2 text-sky-500 p-3">
@@ -694,9 +736,13 @@ export default function AllIcons({ allIconsState, setAllIconsState }) {
         <div
           key={index}
           onClick={() => handleClickedIcon(singleIcon)}
-          className={`w-9 h-9  shadow-sm border border-slate-50 flex items-center 
+          className={`w-9 h-9 shadow-sm border border-slate-50 flex items-center 
             justify-center rounded-lg hover:bg-sky-500 hover:text-white 
-            ${singleIcon.isSelected ? 'bg-sky-500 text-white' : 'bg-white text-sky-500'}`}
+            ${
+              singleIcon.isSelected
+                ? "bg-sky-500 text-white"
+                : "bg-white text-sky-500"
+            }`}
         >
           {singleIcon.icon}
         </div>

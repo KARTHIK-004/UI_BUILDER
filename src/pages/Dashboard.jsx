@@ -1,9 +1,11 @@
 import React from "react";
-import { AppProvider, useTheme } from "../data/ContextApi";
+import { AppProvider, useAppContext, useTheme } from "../data/ContextApi";
 import Sidebar from "../components/Sidebar";
 import ContentArea from "../components/ContentArea";
+import Component from "./Component";
 
 const DashboardContent = () => {
+  const { showComponentPage } = useAppContext();
   const { darkMode } = useTheme();
 
   return (
@@ -15,7 +17,7 @@ const DashboardContent = () => {
       <div className="sticky top-0 h-screen">
         <Sidebar />
       </div>
-      <ContentArea />
+      {!showComponentPage ? <ContentArea /> : <Component />}
     </div>
   );
 };

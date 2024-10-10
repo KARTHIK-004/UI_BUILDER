@@ -2,14 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
-
-import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
+import Component from "./pages/Component";
 import { Login } from "@mui/icons-material";
+import { Toaster } from "react-hot-toast";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Toaster />
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
@@ -33,6 +35,7 @@ function App() {
               </>
             }
           />
+          <Route path="/component" element={<Component />} />
         </Routes>
       </BrowserRouter>
     </>

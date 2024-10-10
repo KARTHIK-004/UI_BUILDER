@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TopBar from "./TopBar";
 import StatsBar from "./StatsBar";
 import ProjectBar from "./ProjectBar";
@@ -7,11 +7,33 @@ import AddProjectWindow from "../components/AddProjectWindow";
 import { useAppContext } from "../data/ContextApi";
 
 function ContentArea() {
-  const { openProjectWindow } = useAppContext();
+  const {
+    openProjectWindow,
+    showComponentPage,
+    openDeleteWindow,
+    openComponentEditor,
+    openAllProjectsWindow,
+    openAllFavoriteComponentsWindow,
+    showSearchBar,
+    mainSearchQuery,
+  } = useAppContext();
+
+  // const [selectedIcon, setSelectedIcon] = useState({
+  //   icon: <CodeIcon />,
+  //   name: "CodeIcon",
+  // });
+
+  // //Get the icon from the callback function and set it in the selectedIcon state
+  // function getTheIconSelected() {
+  //   setSelectedIcon({ icon: icon.icon, name: icon.name });
+  // }
+
   return (
     <div className={` w-full p-5 `}>
       <AddProjectWindow />
-      {openProjectWindow && <SoftLayer />}
+      {openProjectWindow && (
+        <div className="w-full h-full fixed top-0 right-0 bg-black opacity-30"></div>
+      )}
       <TopBar />
       <StatsBar />
       <ProjectBar />
@@ -21,9 +43,3 @@ function ContentArea() {
 }
 
 export default ContentArea;
-
-export function SoftLayer() {
-  return (
-    <div className="w-full h-full fixed top-0 right-0 bg-black opacity-30"></div>
-  );
-}
