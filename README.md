@@ -9,8 +9,6 @@ A simple and powerful UI builder tool / framework designed to help developers cr
 
 **UI_BUILDER** is a user interface library or application that provides developers with tools, templates, or components to streamline the process of building UI layouts and designs. Whether it’s for web applications, dashboards, or design prototypes, this repository offers a foundation to create consistent and modular user interfaces.
 
-_(✏️ Replace this with your own project-specific description once you update with real repository info — e.g., what the project does, which frameworks it uses, etc.)_
-
 ## 🚀 Features
 
 - Component-based UI generation  
