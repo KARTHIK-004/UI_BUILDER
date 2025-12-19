@@ -1,7 +1,3 @@
-I couldn’t load the **actual contents** of the repository at `http://github.com/KARTHIK-004/UI_BUILDER` (it returned an error when trying to fetch the page), so I don’t have direct details about the code, files, or structure in that repo. However, I can still help you draft a **README file template** with a *description* and *topics* section that you can customize once you fill in the specific details.
-
----
-
 ## ✅ **README.md (Draft for `UI_BUILDER`)**
 
 ````markdown
